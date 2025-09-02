@@ -29,6 +29,8 @@ Install the requirements
   python manage.py makemigrations
   python manage.py migrate
 ```
+<img width="1275" height="737" alt="image" src="https://github.com/user-attachments/assets/31036b6d-27ff-4523-9f27-383fb58ccf39" />
+
 
 Run the server. 
 ```bash
