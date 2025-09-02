@@ -53,3 +53,7 @@ The server runs on http://localhost:8000
 | session_id | uuid | Optional. id of the session. if not given will create a new session id  |
 <img width="1356" height="897" alt="image" src="https://github.com/user-attachments/assets/f27a62ef-5269-4a53-bb5f-acc50954ba47" />
 
+##### oak_chatmessage
+<img width="1140" height="197" alt="image" src="https://github.com/user-attachments/assets/8fad5ecf-7e61-441b-abb9-764c4bc07cee" />
+
+
