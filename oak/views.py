@@ -105,6 +105,7 @@ class CaseStoryView(APIView):
                     "main_document": main_document,
                     "journal": journal,
                     "partner": partner,
+                    "social_actor_name": social_actor_name,
                     "case_story": case_story_obj.case_story,
                     "from_cache": True
                 },
@@ -144,6 +145,7 @@ class CaseStoryView(APIView):
                                 "main_document": main_document,
                                 "journal": journal,
                                 "partner": partner,
+                                "social_actor_name": social_actor_name,
                                 "case_story": case_story_obj.case_story,
                                 "from_cache": False
                 },
