@@ -50,4 +50,6 @@ The server runs on http://localhost:8000
 | :-------- | :------- | :------------------------- |
 | text | str | name of the document context  |
 | query | str | query  |
-| session_id | str | Optional. id of the session. if not given will create a new session id  |
+| session_id | uuid | Optional. id of the session. if not given will create a new session id  |
+<img width="1356" height="897" alt="image" src="https://github.com/user-attachments/assets/f27a62ef-5269-4a53-bb5f-acc50954ba47" />
+
