@@ -59,3 +59,20 @@ The server runs on http://localhost:8000
 ##### oak_chatsession
 <img width="687" height="95" alt="image" src="https://github.com/user-attachments/assets/ce20a47a-f846-4bc5-9c75-1ca4d313dc95" />
 
+#### Case story
+```http
+  POST /oak/casestory/
+```
+| Body Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| main_document | str | name of the document- Outcome Journals or Progress Report partners |
+| journal | str | Phase 1 or Phase 2 Journals  |
+| partner | str | Name of the relevant partner  |
+| social_actor_name | str |  Name of the relevant social actor in the partner   |
+| pdf_name | str | name of pdf. Only for Progress Report Partners |
+
+<img width="1379" height="882" alt="image" src="https://github.com/user-attachments/assets/9b69c6c9-4c15-403c-92ef-040876079aca" />
+
+##### oak_casestory
+<img width="1434" height="188" alt="image" src="https://github.com/user-attachments/assets/9b391e87-8cdc-455f-a9e2-8e87ec6fb70e" />
+
