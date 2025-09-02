@@ -39,3 +39,15 @@ Run the server.
 The server runs on http://localhost:8000
 
 ## API Reference
+
+#### Chatbot
+
+```http
+  POST /oak/chat/
+```
+
+| Body Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| text | str | name of the document context  |
+| query | str | query  |
+| session_id | str | Optional. id of the session. if not given will create a new session id  |
