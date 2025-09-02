@@ -56,4 +56,6 @@ The server runs on http://localhost:8000
 ##### oak_chatmessage
 <img width="1140" height="197" alt="image" src="https://github.com/user-attachments/assets/8fad5ecf-7e61-441b-abb9-764c4bc07cee" />
 
+##### oak_chatsession
+<img width="687" height="95" alt="image" src="https://github.com/user-attachments/assets/ce20a47a-f846-4bc5-9c75-1ca4d313dc95" />
 
