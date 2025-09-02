@@ -1,6 +1,6 @@
 # oakdrf
 
-OAK chat functionality using Django Rest Framework
+OAK chat functionality using Django Rest Framework & PostgreSQL.
 
 
 ## Installation
@@ -24,8 +24,16 @@ Install the requirements
 ```bash
   pip install -r "requirements.txt"
 ```
- Since the data will be stored in PostgreSQL, we will have to run migrations.
+ Since the data will be stored in PostgreSQL, we will have to run migrations to set up the tables in the database.
  ```bash
   python manage.py makemigrations
   python manage.py migrate
 ```
+
+Run the server. 
+```bash
+  python manage.py runserver
+```
+The server runs on http://localhost:8000
+
+## API Reference
