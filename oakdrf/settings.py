@@ -78,8 +78,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "oak",       # database name
-        "USER": "postgres",       # db username
-        "PASSWORD": "The46$#ow", # db password
+        "USER": "<enter username>",       # db username
+        "PASSWORD": "<enter password>", # db password
         "HOST": "localhost",          # or the DB server hostname / IP
         "PORT": "5432",               # default postgres port
     }
