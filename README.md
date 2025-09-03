@@ -25,10 +25,14 @@ Install the requirements
   pip install -r "requirements.txt"
 ```
  Since the data will be stored in PostgreSQL, we will have to run migrations to set up the tables in the database.
+ENter username and password in settings.py before running migrations
+ <img width="640" height="280" alt="image" src="https://github.com/user-attachments/assets/51a61fd4-eca9-49d3-b2f8-193a419becac" />
+
  ```bash
   python manage.py makemigrations
   python manage.py migrate
 ```
+The PostgreSQL runs on http://localhost:5432
 <img width="1275" height="737" alt="image" src="https://github.com/user-attachments/assets/31036b6d-27ff-4523-9f27-383fb58ccf39" />
 
 
