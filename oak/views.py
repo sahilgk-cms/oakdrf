@@ -1,10 +1,7 @@
-
-
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
 from oak.case_story_generation import generate_case_story
 from oak.files_processing import load_dict_from_json
 from oak.serializers import ChatRequestSerializer, ChatMessageSerializer, CaseStoryRequestSerializer, CaseStoryChatRequestSerializer, CaseStoryChatMessageSerializer
@@ -20,6 +17,7 @@ logger = get_logger(__name__)
 
 # Create your views here.
 class ChatbotAPIView(APIView):
+    """API View for chat"""
     def post(self, request, *args, **kwargs):
         serializer = ChatRequestSerializer(data = request.data)
         if serializer.is_valid():
@@ -77,6 +75,7 @@ class ChatbotAPIView(APIView):
 
 
 class CaseStoryView(APIView):
+    """API View to generate or retrieve case story"""
     def post(self, request, *args, **kwargs):
         serializer = CaseStoryRequestSerializer(data = request.data)
 
@@ -199,6 +198,7 @@ class CaseStoryView(APIView):
 
 
 class CaseStoryChatView(APIView):
+    """API view to chat with case story"""
     def post(self, request, *args, **kwargs):
         serializer = CaseStoryChatRequestSerializer(data = request.data)
 
