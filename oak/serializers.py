@@ -3,18 +3,21 @@ from .models import ChatMessage, CaseStoryChatMessage
 from oakdrf.config import MAIN_DOCUMENT_CHOICES, OUTCOME_JOURNALS_DICT
 
 class ChatRequestSerializer(serializers.Serializer):
+    """Serializer for chat request"""
     text = serializers.CharField()
     query = serializers.CharField()
     session_id = serializers.CharField(required = False, allow_blank = True)
 
 
 class ChatMessageSerializer(serializers.ModelSerializer):
+    """Model Serializer for chat message"""
     class Meta:
         model = ChatMessage
         fields = ["role", "message", "timestamp"]
 
 
 class CaseStoryRequestSerializer(serializers.Serializer):
+    """Serializer for Case Story request"""
     main_document = serializers.ChoiceField(choices = MAIN_DOCUMENT_CHOICES)
     journal = serializers.CharField(required = False, allow_null = True, allow_blank = True)
     partner = serializers.CharField(required = False, allow_null = True, allow_blank = True)
@@ -46,11 +49,13 @@ class CaseStoryRequestSerializer(serializers.Serializer):
 
 
 class CaseStoryChatRequestSerializer(serializers.Serializer):
+    """Serializer to chat with case stories"""
     session_id = serializers.UUIDField(required = False)
     case_story_id = serializers.IntegerField(required = False)
     query = serializers.CharField(required = True, allow_blank = False)
 
 class CaseStoryChatMessageSerializer(serializers.ModelSerializer):
+    """Model Serializer for case story chat messages"""
     class Meta:
         model = CaseStoryChatMessage
         fields = ["role", "message", "timestamp"]
