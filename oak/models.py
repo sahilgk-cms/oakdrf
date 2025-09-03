@@ -1,5 +1,4 @@
 import uuid
-
 from django.db import models
 from django.contrib.auth.models import User
 from oakdrf.config import MAIN_DOCUMENT_CHOICES
@@ -51,6 +50,7 @@ class CaseStory(models.Model):
         return f"{self.main_document} - {self.journal or self.pdf_name}"
 
 class CaseStoryChatSession(models.Model):
+    """For creating and storing chat sessions w.r.t. case stories"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     case_story = models.ForeignKey(CaseStory, on_delete = models.CASCADE, related_name = "case_story_chatsession")
     created_at = models.DateTimeField(auto_now_add = True)
@@ -59,6 +59,7 @@ class CaseStoryChatSession(models.Model):
         return f"Case Story Chat Session: {self.case_story}"
 
 class CaseStoryChatMessage(models.Model):
+    """For creating and storing chat messages w.r.t. case stories  within a session"""
     session = models.ForeignKey(CaseStoryChatSession, on_delete = models.CASCADE, related_name = "case_story_chatmessages")
     role = models.CharField(max_length = 20, choices = [("user", "User"), ("assistant", "Assistant")])
     message = models.TextField()
