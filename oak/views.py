@@ -98,7 +98,7 @@ class CaseStoryView(APIView):
                 journal = journal,
                 partner = partner,
                 social_actor_name = social_actor_name
-            )
+            ).first()
             if case_story_obj:
                 return Response({
                     "main_document": main_document,
